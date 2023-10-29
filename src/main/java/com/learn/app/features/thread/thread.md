@@ -2,7 +2,7 @@
 There are 3 ways to create new thread : (Example [ThreadCreation.java](ThreadCreation.java))
 1. By Extending ``` Thread ``` class
 2. By Implementing ``` Runnable ``` interface
-3. By Implementing ``` Callable ``` interface
+3. By Implementing ``` Callable ``` interface (Can't submit callable task directly to thread. Need to wrap it with ``` FutureTask<ReturnType>```)
 
 Ways to create Virtual thread :
 1. Using ```Thread``` class only Thread. 
