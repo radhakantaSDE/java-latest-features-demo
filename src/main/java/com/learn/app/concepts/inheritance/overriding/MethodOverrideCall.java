@@ -1,9 +1,7 @@
 package com.learn.app.concepts.inheritance.overriding;
 
     class MoParent {
-        public void show(){
-            System.out.println("Parent show");
-        }
+        public void show(){System.out.println("Parent show");}
 
         protected void greet() {
             System.out.println("Greeting");

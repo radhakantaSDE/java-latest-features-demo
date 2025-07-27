@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
     private Integer id;
     private String name;
@@ -19,4 +19,14 @@ public class Employee {
     private String gender;
     private String city;
     private int yearOfJoining;
+
+    @Override
+    public int compareTo(Employee o) {
+
+        int yearOfJoin = Integer.compare(this.yearOfJoining, o.getYearOfJoining());
+        if (yearOfJoin != 0) {
+            return yearOfJoin; // Compare by year of joining first
+        }
+        return Integer.compare(this.id, o.getId()); // Then compare by id
+    }
 }

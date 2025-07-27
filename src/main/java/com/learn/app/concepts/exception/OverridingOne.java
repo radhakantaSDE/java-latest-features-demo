@@ -12,6 +12,15 @@ package com.learn.app.concepts.exception;
         }
     }
 
+
+    /**
+     * 1. If super class method is throwing an exception,
+     *      - then, the overriding method in the subclass can throw the same exception or a subclass of that exception.
+     *      - It can be empty as well.
+     * 2. If super class method is not throwing any exception,
+     *      - then, the overriding method in the subclass cannot throw any checked exception.
+     *      - It can throw unchecked exceptions.
+     * */
 public class OverridingOne {
 
     public static void main(String[] args) {

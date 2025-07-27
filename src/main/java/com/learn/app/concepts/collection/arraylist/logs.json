@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2023-10-01T10:30:00Z",
+    "message": "ArrayList is now empty, size is 0",
+    "logType": "INFO"
+  },
+  {
+    "timestamp": "2023-10-01T10:00:00Z",
+    "message": "ArrayList initialized with initial capacity of 10",
+    "logType": "INFO"
+  },
+  {
+    "timestamp": "2023-10-01T10:05:00Z",
+    "message": "Added element 'Hello' to ArrayList",
+    "logType": "DEBUG"
+  },
+  {
+    "timestamp": "2023-10-01T10:10:00Z",
+    "message": "ArrayList size is now 1",
+    "logType": "INFO"
+  },
+  {
+    "timestamp": "2023-10-01T10:15:00Z",
+    "message": "Attempting to access index 0 in ArrayList",
+    "logType": "DEBUG"
+  },
+  {
+    "timestamp": "2023-10-01T10:20:00Z",
+    "message": "Element at index 0 is 'Hello'",
+    "logType": "INFO"
+  },
+  {
+    "timestamp": "2023-10-01T10:25:00Z",
+    "message": "Removed element 'Hello' from ArrayList",
+    "logType": "DEBUG"
+  }
+]
