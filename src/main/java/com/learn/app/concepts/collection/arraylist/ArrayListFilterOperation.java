@@ -2,9 +2,12 @@ package com.learn.app.concepts.collection.arraylist;
 
 import com.learn.app.model.Employee;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArrayListFilterOperation {
 
@@ -75,6 +78,16 @@ public class ArrayListFilterOperation {
                 // TODO : Need to implement HashCode and Equals in Employee class for distinct operation
                 .toList(); // Collecting the results into a new list
 
+        List<Employee> distinctEmployeess = new ArrayList<>(
+                employees.stream()
+                        .collect(Collectors.toMap(
+                                e -> e.getName() + "_" + e.getDept(),
+                                e -> e,
+                                (e1, e2) -> e1
+                        ))
+                        .values()
+        );
+
         // Printing the distinct employees
         System.out.println("Distinct Employees: " + distinctEmployees);
     }
@@ -107,6 +120,15 @@ public class ArrayListFilterOperation {
 
         // Printing the sorted list
         System.out.println("Sorted Employees by Name Length and Name: " + sortedEmployees);
+    }
+
+    public void groupEmployeesByDepartment(List<Employee> employees) {
+        // Using Java Streams to group employees by department
+        var groupedByDepartment = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDept));
+
+        // Printing the grouped employees by department
+        System.out.println("Grouped Employees by Department: " + groupedByDepartment);
     }
 
     public void sortEmployeesByFrequencyOfName(List<Employee> employees) {
