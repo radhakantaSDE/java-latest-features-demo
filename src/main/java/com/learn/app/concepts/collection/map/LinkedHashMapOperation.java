@@ -5,20 +5,20 @@ import java.util.Map;
 
 public class LinkedHashMapOperation {
 
-    public void linkedHashMapExamples() {
+  public void linkedHashMapExamples() {
 
-        // Ex-1 : Access order
-        Map<String, Integer> linkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
+    // Ex-1 : Access order
+    Map<String, Integer> linkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
 
-        linkedHashMap.put("A", 1);
-        linkedHashMap.put("B", 2);
-        linkedHashMap.put("C", 3);
+    linkedHashMap.put("A", 1);
+    linkedHashMap.put("B", 2);
+    linkedHashMap.put("C", 3);
 
-        linkedHashMap.get("A");
-        linkedHashMap.get("B");
+    linkedHashMap.get("A");
+    linkedHashMap.get("B");
 
-        linkedHashMap.put("D", 4);
+    linkedHashMap.put("D", 4);
 
-        System.out.println(linkedHashMap);
-    }
+    System.out.println(linkedHashMap);
+  }
 }

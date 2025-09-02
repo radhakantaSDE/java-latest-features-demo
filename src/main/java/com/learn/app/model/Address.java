@@ -7,9 +7,9 @@ import lombok.Data;
 @Builder
 public class Address {
 
-    private String id;
-    private String line1;
-    private String line2;
-    private String pin;
-    private String contact;
+  private String id;
+  private String line1;
+  private String line2;
+  private String pin;
+  private String contact;
 }

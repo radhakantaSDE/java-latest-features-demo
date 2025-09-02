@@ -1,8 +1,7 @@
 package com.learn.app.model;
 
-import lombok.*;
-
 import java.time.Instant;
+import lombok.*;
 
 @Data
 @Builder
@@ -11,7 +10,7 @@ import java.time.Instant;
 @AllArgsConstructor
 public class LogEntry {
 
-    private Instant timestamp;
-    private String message;
-    private String logType;
+  private Instant timestamp;
+  private String message;
+  private String logType;
 }

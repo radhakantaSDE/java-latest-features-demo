@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EmployeeDto {
 
-    private int id;
-    private String name;
+  private int id;
+  private String name;
 }

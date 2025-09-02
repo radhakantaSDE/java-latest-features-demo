@@ -11,22 +11,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Employee implements Comparable<Employee> {
 
-    private Integer id;
-    private String name;
-    private Integer age;
-    private String dept;
-    private double salary;
-    private String gender;
-    private String city;
-    private int yearOfJoining;
+  private Integer id;
+  private String name;
+  private Integer age;
+  private String dept;
+  private double salary;
+  private String gender;
+  private String city;
+  private int yearOfJoining;
 
-    @Override
-    public int compareTo(Employee o) {
+  @Override
+  public int compareTo(Employee o) {
 
-        int yearOfJoin = Integer.compare(this.yearOfJoining, o.getYearOfJoining());
-        if (yearOfJoin != 0) {
-            return yearOfJoin; // Compare by year of joining first
-        }
-        return Integer.compare(this.id, o.getId()); // Then compare by id
+    int yearOfJoin = Integer.compare(this.yearOfJoining, o.getYearOfJoining());
+    if (yearOfJoin != 0) {
+      return yearOfJoin; // Compare by year of joining first
     }
+    return Integer.compare(this.id, o.getId()); // Then compare by id
+  }
 }

@@ -5,27 +5,27 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- *  This pattern will be used if, the cost of creating a new object is expensive and resource intensive.
- *  Concept :
- * */
+ * This pattern will be used if, the cost of creating a new object is expensive and resource
+ * intensive. Concept :
+ */
 public class PrototypeDesignPattern {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Circle crl = new Circle(10.5f);
-        crl.draw();
+    Circle crl = new Circle(10.5f);
+    crl.draw();
 
-        IShape clonedCircle = crl.clone();
-        clonedCircle.draw();
+    IShape clonedCircle = crl.clone();
+    clonedCircle.draw();
 
-        System.out.println(clonedCircle);
-    }
+    System.out.println(clonedCircle);
+  }
 }
 
-
 interface IShape {
-    IShape clone();
-    void draw();
+  IShape clone();
+
+  void draw();
 }
 
 @ToString
@@ -33,17 +33,17 @@ interface IShape {
 @NoArgsConstructor
 class Circle implements IShape {
 
-    private float radius;
+  private float radius;
 
-    @Override
-    public IShape clone() {
-        return new Circle(radius);
-    }
+  @Override
+  public IShape clone() {
+    return new Circle(radius);
+  }
 
-    @Override
-    public void draw() {
-        System.out.println("Drawing circle");
-    }
+  @Override
+  public void draw() {
+    System.out.println("Drawing circle");
+  }
 }
 
 @ToString
@@ -51,15 +51,15 @@ class Circle implements IShape {
 @NoArgsConstructor
 class Square implements IShape {
 
-    private float length;
+  private float length;
 
-    @Override
-    public IShape clone() {
-        return new Square(length);
-    }
+  @Override
+  public IShape clone() {
+    return new Square(length);
+  }
 
-    @Override
-    public void draw() {
-        System.out.println("Drawing Square");
-    }
+  @Override
+  public void draw() {
+    System.out.println("Drawing Square");
+  }
 }
